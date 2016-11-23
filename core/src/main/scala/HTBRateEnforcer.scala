@@ -1,4 +1,4 @@
-package coflow
+package enforcer
 
 import java.io.IOException
 import java.net.InetSocketAddress
@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory
 
 import scala.util.Try
 
-private[coflow] class HTBRateEnforcer(flow: Flow, tcIfIndex: Int, tcParentClassId: Int, tcFlowId: Int, tcCeilRate: Long) {
+class HTBRateEnforcer(flow: Flow, tcIfIndex: Int, tcParentClassId: Int, tcFlowId: Int, tcCeilRate: Long) {
 
     private val MIN_HTB_RATE_LIMIT_BYTES = 1500
 
